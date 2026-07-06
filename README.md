@@ -40,9 +40,19 @@ src/
 
 ## Formulaire de contact
 
-Le formulaire envoie les demandes à `POST /api/contact`. La route valide les champs et journalise
-la demande. Pour un envoi d'email réel en production, connectez un fournisseur (ex. Resend,
-Postmark) dans `src/app/api/contact/route.ts`.
+Le formulaire envoie les demandes à `POST /api/contact`, qui transmet chaque devis par email à
+`opticode6@gmail.com` via [Resend](https://resend.com). Sans la variable d'environnement
+`RESEND_API_KEY`, la route se contente de journaliser la demande (pratique en local).
+
+Pour activer l'envoi réel en production :
+1. Créez un compte gratuit sur [resend.com](https://resend.com)
+2. Générez une clé API (Dashboard → API Keys)
+3. Ajoutez-la comme variable d'environnement `RESEND_API_KEY` dans le projet Vercel
+   (Settings → Environment Variables), puis redéployez
+
+L'expéditeur utilise le domaine de test `onboarding@resend.dev` fourni par Resend. Pour envoyer
+depuis une adresse `@opticode.fr`, vérifiez votre propre domaine dans Resend et mettez à jour le
+champ `from` dans `src/app/api/contact/route.ts`.
 
 ## SEO
 

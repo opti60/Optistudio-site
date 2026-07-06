@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
 
 interface ContactPayload {
   name?: string
@@ -6,6 +7,17 @@ interface ContactPayload {
   email?: string
   phone?: string
   message?: string
+}
+
+const QUOTE_RECIPIENT = 'opticode6@gmail.com'
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
 }
 
 export async function POST(request: Request) {
@@ -23,15 +35,43 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Adresse email invalide.' }, { status: 400 })
   }
 
-  // TODO: brancher un fournisseur d'emailing (ex. Resend) pour transmettre la demande
-  // à l'équipe Opticode et en accuser réception auprès du prospect.
-  console.log('Nouvelle demande de devis reçue :', {
-    name: body.name,
-    company: body.company,
-    email: body.email,
-    phone: body.phone,
-    message: body.message,
-  })
+  const apiKey = process.env.RESEND_API_KEY
+
+  if (!apiKey) {
+    console.warn(
+      'RESEND_API_KEY manquant : la demande de devis n\'a pas été envoyée par email.',
+      body
+    )
+    return NextResponse.json({ success: true })
+  }
+
+  const resend = new Resend(apiKey)
+
+  const { name, company, email, phone, message } = body
+
+  try {
+    await resend.emails.send({
+      from: 'Opticode <onboarding@resend.dev>',
+      to: QUOTE_RECIPIENT,
+      replyTo: email,
+      subject: `Nouvelle demande de devis — ${name}`,
+      html: `
+        <h2>Nouvelle demande de devis</h2>
+        <p><strong>Nom :</strong> ${escapeHtml(name)}</p>
+        <p><strong>Entreprise :</strong> ${escapeHtml(company || 'Non renseignée')}</p>
+        <p><strong>Email :</strong> ${escapeHtml(email)}</p>
+        <p><strong>Téléphone :</strong> ${escapeHtml(phone || 'Non renseigné')}</p>
+        <p><strong>Message :</strong></p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br />')}</p>
+      `,
+    })
+  } catch (error) {
+    console.error('Échec de l\'envoi de la demande de devis par email :', error)
+    return NextResponse.json(
+      { error: 'Impossible d\'envoyer votre demande pour le moment.' },
+      { status: 502 }
+    )
+  }
 
   return NextResponse.json({ success: true })
 }
