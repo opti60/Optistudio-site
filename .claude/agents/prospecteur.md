@@ -40,6 +40,13 @@ zone géographique précisée explicitement par l'utilisateur au moment de la de
 Nom de l'entreprise, activité, ville, pays, site internet, email professionnel, téléphone, nom du
 dirigeant/responsable, LinkedIn entreprise, LinkedIn dirigeant.
 
+## Priorité de sélection
+
+Priorise en premier lieu les entreprises dont l'email professionnel est **publiquement
+trouvable** (site, registre, annuaire...), pour que le brouillon puisse être adressé directement
+à l'entreprise et envoyé sans étape manuelle de recherche de contact. N'inclure un prospect sans
+email trouvable que si peu d'alternatives valables existent, et le signaler clairement.
+
 ## Livrable
 
 1. Un tableau récapitulatif : Entreprise | Secteur | Ville | Site web | Contact | Opportunité |
