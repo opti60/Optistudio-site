@@ -2,7 +2,7 @@ import { formatFlocage, type CartItem } from '@/components/maillots/types'
 
 export const VENDEUR_WHATSAPP = '33602800611'
 
-export function buildWhatsAppMessage(cart: CartItem[]): string {
+export function buildWhatsAppMessage(cart: CartItem[], origin = ''): string {
   const total = cart.reduce((sum, item) => sum + item.prix * item.quantite, 0)
 
   const lignes = cart.map((item) => {
@@ -13,7 +13,8 @@ export function buildWhatsAppMessage(cart: CartItem[]): string {
       `  Prix: ${item.prix * item.quantite}€`,
     ]
     if (item.image) {
-      parts.push(`  📷 Photo: ${item.image}`)
+      const photoUrl = item.image.startsWith('/') ? `${origin}${item.image}` : item.image
+      parts.push(`  📷 Photo: ${photoUrl}`)
     }
     return parts.join('\n')
   })
@@ -35,7 +36,7 @@ export function buildWhatsAppMessage(cart: CartItem[]): string {
   return message
 }
 
-export function buildWhatsAppLink(cart: CartItem[]): string {
-  const message = buildWhatsAppMessage(cart)
+export function buildWhatsAppLink(cart: CartItem[], origin = ''): string {
+  const message = buildWhatsAppMessage(cart, origin)
   return `https://wa.me/${VENDEUR_WHATSAPP}?text=${encodeURIComponent(message)}`
 }

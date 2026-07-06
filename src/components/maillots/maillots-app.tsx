@@ -64,7 +64,7 @@ export function MaillotsApp() {
   }
 
   function handleValidate() {
-    const link = buildWhatsAppLink(cart)
+    const link = buildWhatsAppLink(cart, window.location.origin)
     window.open(link, '_blank', 'noopener,noreferrer')
   }
 
