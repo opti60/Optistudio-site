@@ -74,7 +74,7 @@ export function MaillotsApp() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6">
           <div className="flex items-center justify-between gap-4">
             <h1 className="text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl">
-              ⚽ MAILLOTS
+              ⚽ ZEROBENEFF
             </h1>
             <button
               type="button"
