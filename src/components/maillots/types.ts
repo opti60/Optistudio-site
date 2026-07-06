@@ -5,6 +5,7 @@ export type Ligue =
   | 'Serie A'
   | 'Ligue 1'
   | 'Sélections Nationales'
+  | 'Autres'
 
 export type Taille = 'S' | 'M' | 'L' | 'XL' | 'XXL'
 
