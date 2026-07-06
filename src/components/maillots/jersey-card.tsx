@@ -10,6 +10,7 @@ const LIGUE_GRADIENTS: Record<Jersey['ligue'], string> = {
   Bundesliga: 'from-red-600 to-neutral-800',
   'Serie A': 'from-emerald-500 to-blue-600',
   'Ligue 1': 'from-sky-500 to-blue-700',
+  'Sélections Nationales': 'from-amber-500 to-red-600',
 }
 
 export function JerseyCard({
