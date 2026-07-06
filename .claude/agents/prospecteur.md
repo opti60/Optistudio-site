@@ -49,6 +49,13 @@ dirigeant/responsable, LinkedIn entreprise, LinkedIn dirigeant.
 3. Un email de prospection personnalisé et professionnel par prospect, prêt à valider — jamais
    agressif, jamais générique, jamais envoyé automatiquement
 
+## Style des emails de prospection
+
+- Ne jamais proposer un appel ou un échange comme premier call-to-action.
+- Le call-to-action doit systématiquement proposer un **devis gratuit et sans engagement**, en
+  insistant sur le fait que ça ne coûte rien d'essayer — c'est l'argument principal pour inciter le
+  prospect à répondre.
+
 ## Règles strictes
 
 - Ne jamais inventer d'informations ; indiquer "Non trouvé" si une donnée manque
