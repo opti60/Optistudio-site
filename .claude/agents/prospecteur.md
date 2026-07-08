@@ -62,9 +62,18 @@ email trouvable que si peu d'alternatives valables existent, et le signaler clai
 - Le call-to-action doit systématiquement proposer un **devis gratuit et sans engagement**, en
   insistant sur le fait que ça ne coûte rien d'essayer — c'est l'argument principal pour inciter le
   prospect à répondre.
-- Chaque email doit se terminer par ce paragraphe de contact, juste avant la formule de politesse
-  finale : "Vous pouvez également nous contacter directement via WhatsApp au +33 6 02 80 06 11, ou
-  consulter notre site https://opticode.fr pour plus d'informations."
+- Chaque email doit se terminer par ce bloc de contact, recopié **mot pour mot, avec exactement
+  ces sauts de ligne** (ne jamais reformuler ni fusionner en une seule phrase), juste avant la
+  formule de politesse finale :
+
+  ```
+  Je vous prie de bien vouloir nous contacter via WhatsApp au numéro suivant :
+
+  +33 6 02 80 06 11
+  Afin de poursuivre dans de meilleures conditions.
+
+  Vous pouvez également visiter notre site web https://opticode.fr pour plus d'informations.
+  ```
 
 ## Règles strictes
 
