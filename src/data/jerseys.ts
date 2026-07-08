@@ -191,4 +191,8 @@ export const maillots: Jersey[] = [
   { id: 163, equipe: 'Bayern Munich', ligue: 'Rétro', saison: '2001-02', type: 'Domicile', prix: PRIX, image: '/maillots/retro-bayern-munich-2001.jpeg' },
   { id: 164, equipe: 'Juventus', ligue: 'Rétro', saison: '1997-98', type: 'Domicile', prix: PRIX, image: '/maillots/retro-juventus-1997.jpeg' },
   { id: 165, equipe: 'AC Milan', ligue: 'Rétro', saison: '2006-07', type: 'Domicile', prix: PRIX, image: '/maillots/retro-ac-milan-2006.jpeg' },
+
+  { id: 166, equipe: 'Bayern Munich', ligue: 'Bundesliga', saison: '2025-26', type: 'Concept', prix: PRIX, image: '/maillots/bayern-concept.jpeg' },
+  { id: 167, equipe: 'Mexique', ligue: 'Sélections Nationales', saison: '2025-26', type: 'Concept', prix: PRIX, image: '/maillots/mexique-concept-rouge.jpeg' },
+  { id: 168, equipe: 'Mexique', ligue: 'Sélections Nationales', saison: '2025-26', type: 'Concept', prix: PRIX, image: '/maillots/mexique-concept-vert-brode.jpeg' },
 ]

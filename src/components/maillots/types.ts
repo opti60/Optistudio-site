@@ -15,7 +15,7 @@ export interface Jersey {
   equipe: string
   ligue: Ligue
   saison: string
-  type: 'Domicile' | 'Extérieur' | 'Third'
+  type: 'Domicile' | 'Extérieur' | 'Concept'
   prix: number
   /** URL directe de la photo (Yupoo). `null` tant qu'aucune vraie photo n'est renseignée. */
   image: string | null
