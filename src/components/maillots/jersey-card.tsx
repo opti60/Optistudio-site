@@ -12,6 +12,7 @@ const LIGUE_GRADIENTS: Record<Jersey['ligue'], string> = {
   'Ligue 1': 'from-sky-500 to-blue-700',
   'Sélections Nationales': 'from-amber-500 to-red-600',
   Autres: 'from-slate-500 to-slate-700',
+  Rétro: 'from-yellow-600 to-amber-800',
 }
 
 export function JerseyCard({
