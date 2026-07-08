@@ -1,6 +1,6 @@
 import { formatFlocage, type CartItem } from '@/components/maillots/types'
 
-export const VENDEUR_WHATSAPP = '33602800611'
+export const VENDEUR_WHATSAPP = '33767380793'
 
 export function buildWhatsAppMessage(cart: CartItem[], origin = ''): string {
   const total = cart.reduce((sum, item) => sum + item.prix * item.quantite, 0)
