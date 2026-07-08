@@ -327,4 +327,6 @@ export const maillots: Jersey[] = [
   { id: 297, equipe: 'Pologne', ligue: 'Sélections Nationales', saison: '2025-26', type: 'Domicile', prix: PRIX, image: '/maillots/pologne-domicile.jpeg' },
   { id: 298, equipe: 'Irlande', ligue: 'Sélections Nationales', saison: '2025-26', type: 'Domicile', prix: PRIX, image: '/maillots/irlande-domicile.jpeg' },
   { id: 299, equipe: 'Irlande', ligue: 'Sélections Nationales', saison: '2025-26', type: 'Extérieur', prix: PRIX, image: '/maillots/irlande-exterieur.jpeg' },
+
+  { id: 300, equipe: 'Maroc', ligue: 'Sélections Nationales', saison: '2025-26', type: 'Concept', prix: PRIX, image: '/maillots/maroc-training-bleu.jpeg' },
 ]
