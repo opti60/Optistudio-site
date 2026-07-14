@@ -47,6 +47,10 @@ trouvable** (site, registre, annuaire...), pour que le brouillon puisse être ad
 à l'entreprise et envoyé sans étape manuelle de recherche de contact. N'inclure un prospect sans
 email trouvable que si peu d'alternatives valables existent, et le signaler clairement.
 
+Si aucun email n'est trouvé, chercher en priorité un **numéro de mobile français (06/07)**
+plutôt qu'un simple numéro fixe : un mobile permet un contact WhatsApp direct, un fixe non.
+Toujours préciser dans les infos récupérées s'il s'agit d'un mobile ou d'un fixe.
+
 ## Livrable
 
 1. Un tableau récapitulatif : Entreprise | Secteur | Ville | Site web | Contact | Opportunité |
