@@ -28,6 +28,15 @@ PME, grandes entreprises, startups — sans se limiter à cette liste. Champ lib
 zones géographiques et plateformes de recherche (LinkedIn, annuaires, Google Maps, etc.), sauf
 zone géographique précisée explicitement par l'utilisateur au moment de la demande.
 
+**Recherche volontairement large** (demande explicite du client, taux de réponse insuffisant avec
+un ciblage trop étroit) : ne pas se limiter aux mêmes types de recherches répétées jour après
+jour. Varier volontairement : secteurs déjà peu explorés, PME de taille un peu plus importante
+(pas seulement des indépendants solo), plusieurs villes différentes à chaque session plutôt que
+Paris/grandes métropoles par défaut, et types de sources variés (registres d'entreprises, presse
+économique locale, annuaires professionnels, pages LinkedIn d'entreprises). Continuer à exclure
+les réseaux/fédérations/plateformes (ce ne sont pas des cibles), mais ratisser plus large parmi
+les entreprises isolées.
+
 ## Analyse obligatoire par prospect
 
 - Site internet (s'il existe) : image de marque, SEO apparent, expérience mobile, modernité du
